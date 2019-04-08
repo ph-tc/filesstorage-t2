@@ -285,7 +285,7 @@
     .main .btn {
       position: relative;
       display: inline-block;
-      width: 80vw;
+      width: 95vw;
       height: 20vh;
       text-decoration: none;
       text-transform: uppercase;
@@ -327,22 +327,6 @@
       background-repeat: no-repeat;
     }
 
-    .main .price {
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      text-align: center;
-    }
-
-    .main .price p {
-      margin-top: 5px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 22px;
-      line-height: 22px;
-      color: #444;
-      opacity: 0.6;
-    }
-
     @media screen and (max-height: 520px) {
       .main .loading h1 {
         display: none;
@@ -355,7 +339,7 @@
       }
     }
 
-    @media screen and (max-height: 240px) and (orientation: landscape) {
+    @media screen and (max-height: 290px) and (orientation: landscape) {
       .main .inner {
         display: table-cell;
         vertical-align: middle;
@@ -381,6 +365,10 @@
       display: table-row;
     }
 
+    .footer input, .footer label {
+      vertical-align: middle;
+    }
+
     .footer p {
       padding: 2px;
     }
@@ -389,8 +377,8 @@
     .footer a {
       font-family: 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 10px;
+      line-height: 1;
       text-align: center;
       color: #706E6D;
       opacity: 0.6;
@@ -437,19 +425,31 @@
       <a class="btn" id="btn" href="#">
         <span>Загрузить</span>
       </a>
-      <div class="price">
-        <p>Цена: 20 руб. за 1 день</p>
-      </div>
     </div>
   </div>
 </div>
 
 <div class="footer" id="footer">
-  <p>Провайдер: ООО «Согласие»<br>
-    Infohelp@informpartner.com<br>
-    8-800-123-00-01<br>
-    <a href="#">Пользовательское соглашение</a>
-  </p>
+  <input type="hidden" id="service_id" value="2317000">
+  <input type="hidden" id="service_name" value="somedomain.com">
+  <input type="hidden" id="service_button" value="Загрузить">
+  <input type="hidden" id="service_price" value="30">
+  <input type="hidden" id="service_adult" value="1">
+  <input type="hidden" id="service_offer" value="https://somedomain.com/rules">
+  <div class="inner">
+    <p>
+      <input type="checkbox" id="check">
+      <label for="check">Согласен с правилами предоставления услуги</label>
+      <br>
+      <br>
+      Провайдер: ООО «ТД МЕДИА» | Стоимость: 30 руб./сут. (с НДС)
+      Списание будет производиться с Вашего лицевого счета Tele2.
+      <br>
+      <br>
+      Нажатием на кнопку «Скачать» вы осуществляете заказ доступа к подписке «file-load.pw», подтверждаете ознакомление и согласие с
+      <a href="#">«Правилами предоставления услуги»</a>.
+    </p>
+  </div>
 </div>
 
 <script type="text/javascript">
