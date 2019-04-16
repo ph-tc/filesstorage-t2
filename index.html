@@ -332,9 +332,9 @@
         transform: scale(1);
       }
       to {
-        background-color: #3f443f;
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
+        background-color: #4f694c;
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
       }
     }
 
@@ -345,9 +345,9 @@
         transform: scale(1);
       }
       to {
-        background-color: #3f443f;
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
+        background-color: #4f694c;
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
       }
     }
 
@@ -536,13 +536,18 @@
     }
 
     @media screen and (max-height: 690px) {
+      .rating {
+        top: 100%;
+        margin-top: 60px;
+      }
+
       .rating .graphic {
         display: none;
       }
 
       .rating .total {
         display: block;
-        width: 80vw;
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -572,12 +577,12 @@
       .rating .total .users {
         display: table-cell;
         width: 100%;
-        font-size: 14px;
+        font-size: 18px;
         text-align: right;
       }
     }
 
-    @media screen and (max-height: 580px) {
+    @media screen and (max-height: 510px) {
       .rating {
         display: none;
       }
