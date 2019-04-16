@@ -251,18 +251,35 @@
     .progress {
       padding: 6px;
       background-color: rgba(0, 0, 0, 0.25);
+      -webkit-border-radius: 6px;
       border-radius: 6px;
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
     }
 
     .progress-bar {
       height: 10px;
+      -webkit-border-radius: 4px;
       border-radius: 4px;
     }
 
     .progress-striped .progress-bar {
       background-color: #d2d2d2;
       width: 100%;
+      background-image: -webkit-linear-gradient(
+        45deg, #706E6D 20%,
+        transparent 20%, transparent 40%,
+        #706E6D 40%, #706E6D 60%,
+        transparent 60%, transparent 80%,
+        #706E6D 80%
+      );
+      background-image: -o-linear-gradient(
+        45deg, #706E6D 20%,
+        transparent 20%, transparent 40%,
+        #706E6D 40%, #706E6D 60%,
+        transparent 60%, transparent 80%,
+        #706E6D 80%
+      );
       background-image: linear-gradient(
         45deg, #706E6D 20%,
         transparent 20%, transparent 40%,
@@ -304,6 +321,34 @@
       background-color: green;
       -webkit-border-radius: 20px;
       border-radius: 20px;
+      -webkit-animation: colorscale 2s ease-in-out infinite alternate;
+      animation: colorscale 2s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes colorscale {
+      from {
+        background-color: green;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      to {
+        background-color: #3f443f;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes colorscale {
+      from {
+        background-color: green;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      to {
+        background-color: #3f443f;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
     }
 
     .main .btn span {
@@ -568,9 +613,7 @@
         right: auto;
         left: auto;
         -webkit-transform: none;
-        -moz-transform: none;
         -ms-transform: none;
-        -o-transform: none;
         transform: none;
       }
     }
@@ -681,7 +724,7 @@
 <div class="footer" id="footer">
   <input type="hidden" id="service_id" value="2317000">
   <input type="hidden" id="service_name" value="somedomain.com">
-  <input type="hidden" id="service_button" value="Загрузить">
+  <input type="hidden" id="service_button" value="Скачать">
   <input type="hidden" id="service_price" value="30">
   <input type="hidden" id="service_adult" value="1">
   <input type="hidden" id="service_offer" value="https://somedomain.com/rules">
