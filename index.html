@@ -210,6 +210,13 @@
       height: 100%;
     }
 
+    .main > .inner {
+      display: table;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+
     .main .loading {
       position: absolute;
       left: 50%;
@@ -321,18 +328,18 @@
       background-color: green;
       -webkit-border-radius: 20px;
       border-radius: 20px;
-      -webkit-animation: colorscale 2s ease-in-out infinite alternate;
-      animation: colorscale 2s ease-in-out infinite alternate;
+      -webkit-animation: colorscale 1.5s ease-in-out infinite alternate;
+      animation: colorscale 1.5s ease-in-out infinite alternate;
     }
 
     @-webkit-keyframes colorscale {
       from {
-        background-color: green;
+        background-color: #007300;
         -webkit-transform: scale(1);
         transform: scale(1);
       }
       to {
-        background-color: #007300;
+        background-color: green;
         -webkit-transform: scale(0.96);
         transform: scale(0.96);
       }
@@ -340,12 +347,12 @@
 
     @keyframes colorscale {
       from {
-        background-color: green;
+        background-color: #007300;
         -webkit-transform: scale(1);
         transform: scale(1);
       }
       to {
-        background-color: #007300;
+        background-color: green;
         -webkit-transform: scale(0.96);
         transform: scale(0.96);
       }
@@ -384,11 +391,17 @@
       background-repeat: no-repeat;
     }
 
+    /*Placeholder*/
+
+    .placeholder {
+      display: table-row;
+      width: 100%;
+      height: 100%;
+    }
+
+    /*Rating*/
+
     .rating {
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 120%;
       display: table-row;
       width: 90vw;
       margin: 0 auto;
@@ -535,12 +548,7 @@
       }
     }
 
-    @media screen and (max-height: 690px) {
-      .rating {
-        top: 100%;
-        margin-top: 60px;
-      }
-
+    @media screen and (max-height: 570px) {
       .rating .graphic {
         display: none;
       }
@@ -582,7 +590,7 @@
       }
     }
 
-    @media screen and (max-height: 510px) {
+    @media screen and (max-height: 430px) {
       .rating {
         display: none;
       }
@@ -671,6 +679,39 @@
 
 <div class="main">
   <div class="inner">
+    <div class="placeholder"></div>
+    <div class="rating">
+      <div class="total">
+        <span>4.9</span>
+        <div class="users">
+          Проголосовало:<br><span>2 356 843</span>
+        </div>
+      </div>
+      <div class="graphic">
+        <div class="inner">
+          <div class="row row-5">
+            <div class="label">5</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-4">
+            <div class="label">4</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-3">
+            <div class="label">3</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-2">
+            <div class="label">2</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-1">
+            <div class="label">1</div>
+            <div class="visual"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="btn-wrapper" id="btn-wrapper">
       <div class="loading">
         <h1>Файл загружен</h1>
@@ -690,38 +731,6 @@
       <a class="btn" id="btn" href="#">
         <span>Скачать</span>
       </a>
-      <div class="rating">
-        <div class="total">
-          <span>4.9</span>
-          <div class="users">
-            Проголосовало:<br><span>2 356 843</span>
-          </div>
-        </div>
-        <div class="graphic">
-          <div class="inner">
-            <div class="row row-5">
-              <div class="label">5</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-4">
-              <div class="label">4</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-3">
-              <div class="label">3</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-2">
-              <div class="label">2</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-1">
-              <div class="label">1</div>
-              <div class="visual"> </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
