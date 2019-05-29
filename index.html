@@ -217,6 +217,8 @@
       padding: 10px;
     }
 
+    /*Loading*/
+
     .main .loading {
       position: absolute;
       left: 50%;
@@ -303,6 +305,15 @@
     .main .loading .percenteges span:last-child {
       float: right;
     }
+
+    @media screen and (max-height: 570px) {
+      .main .loading {
+        display: none;
+      }
+    }
+
+
+    /*Button*/
 
     .main .btn-wrapper {
       position: absolute;
@@ -548,7 +559,7 @@
       }
     }
 
-    @media screen and (max-height: 570px) {
+    @media screen and (max-height: 370px) {
       .rating .graphic {
         display: none;
       }
@@ -590,7 +601,7 @@
       }
     }
 
-    @media screen and (max-height: 430px) {
+    @media screen and (max-height: 320px) {
       .rating {
         display: none;
       }
@@ -611,6 +622,18 @@
     @media screen and (max-height: 380px) {
       .main .loading {
         display: none;
+      }
+    }
+
+    @media screen and (max-height: 570px) {
+      .main .btn-wrapper {
+        top: 35%;
+      }
+    }
+
+    @media screen and (max-height: 320px) {
+      .main .btn-wrapper {
+        top: 40%;
       }
     }
 
