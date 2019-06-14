@@ -740,6 +740,12 @@
 
     .footer {
       display: table-row;
+			font-family: 'Arial', sans-serif;
+			font-weight: normal;
+			font-size: 10px;
+			line-height: 1;
+			text-align: center;
+			color: #e3dede;
     }
 
     .footer input, .footer label {
@@ -752,12 +758,7 @@
 
     .footer p,
     .footer a {
-      font-family: 'Arial', sans-serif;
-      font-weight: normal;
-      font-size: 10px;
-      line-height: 1;
-      text-align: center;
-      color: #e3dede;
+			color: #e3dede;
       opacity: 0.6;
     }
 
@@ -843,10 +844,8 @@
   </div>
 </div>
 
-<div class="footer" id="footer">
-  <div class="inner">
+<div class="footer" id="foot">
 
-  </div>
 </div>
 
 <form class="form" name="frm_disabled" method="get" action="<%= (String)request.getSession().getAttribute(" urlLocation ") %>" onkeypress="if (event.keyCode == 13) return false;">
